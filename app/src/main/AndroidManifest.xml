@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="fr.cned.emdsgil.suividevosfrais">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:fullBackupContent="@xml/my_backup_rules">
+        <activity android:name=".activities.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="http"
+                    android:host="recipe-app.com"
+                    android:pathPrefix="/recipes" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.HfActivity" />
+        <activity android:name=".activities.HfRecapActivity" />
+        <activity android:name=".activities.KmActivity" />
+        <activity android:name=".activities.NuiteeActivity" />
+        <activity android:name=".activities.RepasActivity" />
+        <activity android:name=".activities.EtapeActivity" />
+        <activity android:name=".activities.TransfertActivity" />
+    </application>
+    <uses-permission android:name="android.permission.INTERNET"/>
+</manifest>
